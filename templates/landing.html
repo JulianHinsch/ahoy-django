@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block title %} | Home {% endblock %}
+
+{% block content %}
+    <div class="card home">
+        <h1>AHOY Indie Media</h1>
+        <a role="button" href="{% url 'watch_schedule' %}">WATCH</a>
+        <a role="button" href="{% url 'listen_schedule' %}">LISTEN</a>
+        <a role="button" href="{% url 'schedule' %}">SCHEDULE</a>
+    </div>
+{% endblock %}

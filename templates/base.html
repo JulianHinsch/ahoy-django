@@ -1,0 +1,21 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Ahoy Indie Media{% block title %}{% endblock %}</title>
+  <script
+    src="https://code.jquery.com/jquery-3.6.3.min.js"
+    integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU="
+    crossorigin="anonymous"></script>
+  {% block script %}{% endblock %}
+  <link rel='icon' href="{% static 'favicon.ico' %}">
+  <link rel="stylesheet" href="{% static '/stylesheets/dist/main.css' %}">
+</head>
+<body>
+    {% block content %}
+    {% endblock %}
+</body>
+</html>
