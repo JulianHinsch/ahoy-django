@@ -1,12 +1,17 @@
 {% extends 'base.html' %}
+{% load static %}
 
 {% block title %} | Home {% endblock %}
 
 {% block content %}
-    <div class="card home">
-        <h1>AHOY Indie Media</h1>
-        <a role="button" href="{% url 'watch_schedule' %}">WATCH</a>
-        <a role="button" href="{% url 'listen_schedule' %}">LISTEN</a>
-        <a role="button" href="{% url 'schedule' %}">SCHEDULE</a>
-    </div>
+    <main class="landing">
+        <div class="flex-container">
+            <img src="{% static 'images/logo-white.png' %}" alt="AHOY Indie Media">
+            <nav>
+                <a role="button" href="{% url 'watch_schedule' %}">WATCH</a>
+                <a role="button" href="{% url 'listen_schedule' %}">LISTEN</a>
+                <a role="button" href="{% url 'schedule' %}">SCHEDULE</a>        
+            </nav>
+        </div>
+    </main>
 {% endblock %}

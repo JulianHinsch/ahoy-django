@@ -1,0 +1,19 @@
+$color-black: #000000;
+
+body {
+    background-color: $color-black;
+    font-family: rubik;
+}
+
+.main {
+    position: absolute;
+    width: 100%;
+    min-height: 100vh;
+}
+
+a {
+    text-decoration: none;
+    outline: none;
+    cursor: pointer;
+    color: inherit;
+}
