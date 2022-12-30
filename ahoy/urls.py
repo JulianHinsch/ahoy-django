@@ -26,3 +26,5 @@ urlpatterns = [
     path('listen/', include('listen.urls')),
     path('schedule', TemplateView.as_view(template_name='schedule.html'), name='schedule'),
 ]
+
+admin.site.site_header = 'Administration'
