@@ -1,0 +1,12 @@
+{% load static %}
+
+<header>
+    <a href="/">
+        <img class="logo" src="{% static 'images/logo-white.png' %}" alt="AHOY Indie Media">
+    </a>
+    <nav>
+        <a role="button" href="{% url 'watch' %}">WATCH</a>
+        <a role="button" href="{% url 'listen' %}">LISTEN</a>
+        <a role="button" href="{% url 'schedule' %}">SCHEDULE</a>
+    </nav>
+</header>
