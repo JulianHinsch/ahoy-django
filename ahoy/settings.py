@@ -40,8 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'sass_processor',
     'accounts',
-    'watch',
-    'listen',
+    'stream',
 ]
 
 MIDDLEWARE = [

@@ -22,7 +22,5 @@ urlpatterns = [
     path('accounts/', include('accounts.urls')),
     path('accounts/', include('django.contrib.auth.urls')),
     path('', TemplateView.as_view(template_name='landing.html'), name='landing'),
-    path('watch/', include('watch.urls')),
-    path('listen/', include('listen.urls')),
-    path('schedule', TemplateView.as_view(template_name='schedule.html'), name='schedule'),
+    path('', include('stream.urls')),
 ]
