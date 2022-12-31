@@ -1,0 +1,30 @@
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 1em;
+    z-index: 1;
+
+    .logo {
+        width: 100px;
+        height: 100%;
+    }
+
+    nav {
+        display: flex;
+
+        a {
+            color: $color-white;
+            display: flex;
+            align-items: center;
+            padding: 0.5em;
+            border: 2px solid transparent;
+
+            &:hover {
+                border-color: $color-white;
+            }
+        }
+    }
+}
