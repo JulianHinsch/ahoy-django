@@ -1,0 +1,60 @@
+{% extends 'base.html' %}
+
+{% block header %}
+    {% include './partials/header.html' %}
+{% endblock %}
+
+{% block title %} | Schedule {% endblock %}
+
+{% block content %}
+    <main class="schedule-page">
+        <div class="schedule">
+            <h1>Watch Schedule Lineup</h1>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Time Slot</th>
+                        <th>Media</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for watch_item in watch_items %}
+                        <tr>
+                            <td>{{ watch_item.start_time }}</td>
+                            <td>{{ watch_item.title }}</td>
+                        </tr>
+                    {% empty %}
+                        <tr>
+                            <td colspan="2">
+                                No items scheduled today
+                            </td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+            <h1>Radio Schedule Lineup</h1>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Time Slot</th>
+                        <th>Media</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for listen_item in listen_items %}
+                        <tr>
+                            <td>{{ listen_item.start_time }}</td>
+                            <td>{{ listen_item.title }}</td>
+                        </tr>
+                    {% empty %}
+                        <tr>
+                            <td colspan="2">
+                                No items scheduled today
+                            </td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </main>
+{% endblock %}

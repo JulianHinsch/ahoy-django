@@ -1,23 +1,7 @@
-$color-white: #ffffff;
-
 .landing {
-    padding: 1em;
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
+    @include full-page-cover;
 
-    background-color: rgb(172, 172, 163);
     background-image: url("https://s.yimg.com/uu/api/res/1.2/rVdUX8eVa31S_5JDCvvp0A--~B/Zmk9ZmlsbDtweW9mZj0wO3c9NjQwO2g9MzYwO3NtPTE7YXBwaWQ9eXRhY2h5b24-/http://media.zenfs.com/en-US/video/video.storyful.com/866362344b92b1cb1d9c3a36db9b0520");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-
-    @media(min-width: 768px) {
-        align-items: center;
-    }
 
     .flex-container {
         max-width: 600px;
@@ -25,7 +9,7 @@ $color-white: #ffffff;
         flex-direction: column;
 
         @media(min-width: 768px) {
-            background-color: rgba(0,0,0,0.1);
+            background-color: rgba(0,0,0,0.5);
             flex-direction: row;
             align-items: center;
             padding: 1em;

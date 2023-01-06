@@ -2,11 +2,15 @@
 @import 'fonts.scss';
 @import 'normalize.scss';
 @import 'global.scss';
+@import 'mixins.scss';
+@import 'variables.scss';
 
 // Content
+@import 'header.scss';
 @import 'landing.scss';
 @import 'form.scss';
 @import 'card.scss';
 @import 'auth_form.scss';
 @import 'schedule.scss';
-
+@import 'watch.scss';
+@import 'listen.scss';

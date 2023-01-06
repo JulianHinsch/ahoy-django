@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %} | Listen {% endblock %}
+
+{% block content %}
+    <div class="listen-page">
+        <main>
+            {% if listen_item %}
+                <!-- TODO - add video -->
+            {% else %}
+                <h2>Womp!</h2>
+                <p>We don't have any content scheduled.</p>
+                <p>Check back later or see <a href="{% url 'schedule' %}">today's schedule</a>.</p>
+            {% endif %}
+        </main>
+        <footer>
+            <a href="/">
+                <img class="logo" src="{% static 'images/logo-white.png' %}" alt="AHOY Indie Media">
+            </a>
+            {% if listen_item %}
+                <div class="now-playing">
+                    <h2>Now Playing: {{ listen_item.title }}</h2>
+                    <p>{{ listen_item.description }}</p>
+                </div>
+            {% endif %}
+            <nav>
+                <a role="button" href="{% url 'watch' %}">WATCH</a>
+                <a role="button" href="{% url 'listen' %}">LISTEN</a>
+                <a role="button" href="{% url 'schedule' %}">SCHEDULE</a>
+            </nav>
+        </footer>
+    </div>
+{% endblock %}

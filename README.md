@@ -2,14 +2,12 @@
 
 User Stories:
 
-- I can add/schedule a video stream (admin)
-- I can add/schedule a radio stream (admin)
-- I can view the current radio stream
-- I can view the current video stream
-- I can view a schedule of radio streams
-- I can view a schedule of video streams
-- I can view a combined schedule
-- I can create an account
+:white_check_mark I can add/schedule a video stream (admin)
+:white_check_mark I can add/schedule a radio stream (admin)
+:white_large_square I can view the current radio stream
+:white_large_square I can view the current video stream
+:white_check_mark I can view a combined schedule
+:white_large_square I can create an account
 
 ## Create virtual environment
 
