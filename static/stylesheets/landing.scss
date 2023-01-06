@@ -36,6 +36,12 @@
                 border: 3px solid white;
                 margin: 10px;
                 color: $color-white;
+
+                &.-fund {
+                    border: none;
+                    margin-top: 1em;
+                    padding: 0;
+                }
             }
         }
     }

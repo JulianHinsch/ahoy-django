@@ -102,6 +102,10 @@ header {
         border: 3px solid white;
         margin: 10px;
         color: #ffffff; }
+        .landing .flex-container > nav > a.-fund {
+          border: none;
+          margin-top: 1em;
+          padding: 0; }
 
 .auth-form .errorlist {
   order: -1;
@@ -169,6 +173,51 @@ header {
     .schedule table td[colspan="2"] {
       text-align: center; }
 
+.watch-page {
+  padding: 1em;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  color: #ffffff;
+  background-color: #000000; }
+  .watch-page main {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center; }
+    .watch-page main a {
+      text-decoration: underline; }
+  .watch-page footer {
+    padding: 1em;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    border: 1px solid #FFFFBC; }
+    .watch-page footer .logo {
+      width: 100px;
+      height: 100%; }
+    .watch-page footer nav {
+      display: flex; }
+      .watch-page footer nav a {
+        color: #ffffff;
+        display: flex;
+        align-items: center;
+        padding: 0.5em;
+        border: 2px solid transparent; }
+        .watch-page footer nav a:hover {
+          border-color: #ffffff; }
+    @media (max-width: 767px) {
+      .watch-page footer {
+        justify-content: center; }
+        .watch-page footer nav {
+          display: none; } }
 .watch-page {
   padding: 1em;
   position: fixed;
