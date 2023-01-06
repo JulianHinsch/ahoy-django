@@ -23,6 +23,12 @@
                             <td>{{ watch_item.start_time }}</td>
                             <td>{{ watch_item.title }}</td>
                         </tr>
+                    {% empty %}
+                        <tr>
+                            <td colspan="2">
+                                No items scheduled today
+                            </td>
+                        </tr>
                     {% endfor %}
                 </tbody>
             </table>
@@ -39,6 +45,12 @@
                         <tr>
                             <td>{{ listen_item.start_time }}</td>
                             <td>{{ listen_item.title }}</td>
+                        </tr>
+                    {% empty %}
+                        <tr>
+                            <td colspan="2">
+                                No items scheduled today
+                            </td>
                         </tr>
                     {% endfor %}
                 </tbody>

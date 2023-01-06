@@ -47,5 +47,9 @@
         td:last-child {
             text-align: left;
         }
+
+        td[colspan="2"] {
+            text-align: center;
+        }
     }
 }
