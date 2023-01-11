@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from datetime import datetime
+from django.utils import timezone
 
 from .models import WatchItem, ListenItem
 
@@ -12,7 +13,7 @@ def schedule(request):
 
 def watch(request):
     try:
-        current_item = WatchItem.objects.filter(start_time__gte = datetime.now()).earliest('start_time')
+        current_item = WatchItem.objects.filter(start_time__gte = timezone.now()).earliest('start_time')
     except WatchItem.DoesNotExist:
         current_item = None
     context = {'watch_item': current_item }
@@ -21,7 +22,7 @@ def watch(request):
 
 def listen(request):
     try:
-        current_item = ListenItem.objects.filter(start_time__gte = datetime.now()).earliest('start_time')
+        current_item = ListenItem.objects.filter(start_time__gte = timezone.now()).earliest('start_time')
     except ListenItem.DoesNotExist:
         current_item = None
     context = {'listen_item': current_item }
