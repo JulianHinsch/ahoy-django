@@ -12,3 +12,4 @@ psycopg2==2.9.5
 rcssmin==1.1.0
 rjsmin==1.2.0
 sqlparse==0.4.3
+whitenoise==6.3.0
