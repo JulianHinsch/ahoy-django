@@ -5,8 +5,14 @@
         <img class="logo" src="{% static 'images/logo-white.png' %}" alt="AHOY Indie Media">
     </a>
     <nav>
-        <a role="button" href="{% url 'watch' %}">WATCH</a>
-        <a role="button" href="{% url 'listen' %}">LISTEN</a>
-        <a role="button" href="{% url 'schedule' %}">SCHEDULE</a>
+        <a class="-desktop-only" role="button" href="{% url 'watch' %}">WATCH</a>
+        <a class="-desktop-only" role="button" href="{% url 'listen' %}">LISTEN</a>
+        <a class="-desktop-only" role="button" href="{% url 'schedule' %}">SCHEDULE</a>
+        {% if user.is_authenticated %}
+            <a role='button' href="{% url 'logout' %}">LOG OUT</a>
+        {% else %}
+            <a role="button" href="{% url 'login' %}">LOG IN</a>
+            <a role="button" href="{% url 'signup' %}">SIGN UP</a>
+        {% endif %}
     </nav>
 </header>
