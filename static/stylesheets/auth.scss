@@ -1,0 +1,160 @@
+.auth-page {
+    @include full-page-cover;
+
+    @media(max-width: 767px) {
+        position: absolute;
+    }
+
+    > .card {
+        width: calc(600px + 4em);
+        color: $color-white;
+        padding: 2em;
+        background-color: rgba(0,0,0,0.5);
+
+        @media (max-width: 767px) {
+            width: calc(300px + 4em);
+            margin-top: 3em;
+        }
+
+        > h1 {
+            font-weight: normal;
+        }
+
+        > .auth-form {
+
+            label {
+                display: block;
+                margin-bottom: 0.5em;
+            }
+
+            input {
+                display: block;
+                background-color: $color-dark-grey;
+                margin-bottom: 2em;
+                outline: none;
+                border: none;
+                width: 100%;
+                color: $color-white;
+                padding: 1em;
+                border-radius: 3px;
+            }
+
+            button {
+                display: block;
+                width: 100%;
+                padding: 1em;
+                text-align: center;
+                border: 3px solid $color-white;
+                background-color: transparent;
+                color: $color-white;
+                cursor: pointer;
+                margin-bottom: 2em;
+                text-transform: uppercase;
+                font-size: 1em;
+            }
+
+            a {
+                text-decoration: underline;
+            }
+
+            .errorlist {
+                order: -1;
+                padding: 10px;
+                background-color: red;
+                border-radius: 3px;
+                list-style-type: none;
+                margin-top: 0;
+            }
+
+            .helptext {
+                display: none;
+            }
+
+            br {
+                display: none;
+            }
+
+            > .two-column-layout {
+                // Hack to get around auto-generated html structure
+
+                @media (min-width: 768px) {
+                    position: relative;
+                    width: 600px;
+                    height: 290px;
+
+                    > label,
+                    > input {
+                        position: absolute;
+                        width: calc(50% - 1.5em);
+                    }
+
+                    // 1st row
+
+                    > label:nth-of-type(1) {
+                        left: 0;
+                        top: 0;
+                    }
+
+                    > input:nth-of-type(1) {
+                        left: 0;
+                        top: 30px
+                    }
+
+                    > label:nth-of-type(2) {
+                        right: 0;
+                        top: 0;
+                    }
+
+                    > input:nth-of-type(2) {
+                        right: 0;
+                        top: 30px;
+                    }
+
+                    // 2nd row
+
+                    > label:nth-of-type(3) {
+                        left: 0;
+                        top: 90px;
+                    }
+
+                    > input:nth-of-type(3) {
+                        left: 0;
+                        top: 120px
+                    }
+
+                    > label:nth-of-type(4) {
+                        right: 0;
+                        top: 90px;
+                    }
+
+                    > input:nth-of-type(4) {
+                        right: 0;
+                        top: 120px;
+                    }
+
+                    // 3rd row
+
+                    > label:nth-of-type(5) {
+                        left: 0;
+                        top: 180px;
+                    }
+
+                    > input:nth-of-type(5) {
+                        left: 0;
+                        top: 210px;
+                    }
+
+                    > label:nth-of-type(6) {
+                        right: 0;
+                        top: 180px;
+                    }
+
+                    > input:nth-of-type(6) {
+                        right: 0;
+                        top: 210px;;
+                    }
+                }
+            }
+        }
+    }
+}
