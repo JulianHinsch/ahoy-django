@@ -17,7 +17,7 @@ def signup(request):
             p = form.cleaned_data['password1']
             new_user = authenticate(username = u, password = p)
             login(request, new_user)
-            return HttpResponseRedirect("/dashboard/")
+            return HttpResponseRedirect("/")
     else:
         form = CustomUserCreationForm()
         return render(request, 'signup.html', {'form': form})
