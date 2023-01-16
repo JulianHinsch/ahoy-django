@@ -6,8 +6,12 @@ User Stories:
 - [x] I can add/schedule a radio stream (admin)
 - [ ] I can view the current radio stream
 - [ ] I can view the current video stream
+- [ ] I can view all uploaded audio media in a list view
+- [ ] I can view all uploaded video media in a list view
 - [x] I can view a combined schedule
-- [ ] I can create an account
+- [x] I can create an account
+- [ ] I can purchase tokens to view content using Stripe
+- [ ] I can view my account details and tokens on an account page
 
 ## Create virtual environment
 
