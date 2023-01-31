@@ -2,13 +2,8 @@
 
 User Stories:
 
-- [x] I can add/schedule a video stream (admin)
-- [x] I can add/schedule a radio stream (admin)
-- [ ] I can view the current radio stream
-- [ ] I can view the current video stream
-- [ ] I can view all uploaded audio media in a list view
-- [ ] I can view all uploaded video media in a list view
-- [x] I can view a combined schedule
+- [x] I can add a film (admin)
+- [x] I can view all uploaded films in a list view
 - [x] I can create an account
 - [ ] I can purchase tokens to view content using Stripe
 - [ ] I can view my account details and tokens on an account page
@@ -37,3 +32,12 @@ python manage.py migrate
 ```
 python3 manage.py runserver
 ```
+
+# Working with Stripe
+
+Install the [stripe cli](https://stripe.com/docs/stripe-cli)
+
+```
+brew install stripe/stripe-cli/stripe
+```
+

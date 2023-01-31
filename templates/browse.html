@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block header %}
+    {% include './partials/header.html' %}
+{% endblock %}
+
+{% block title %} | Browse {% endblock %}
+
+{% block content %}
+    <main class="browse-page">
+        <h1 class="title">Browse</h1>
+        <div class="film-list">
+            {% for film in films %}
+                <a class="film" href="{% url 'watch' film.id %}">
+                    <!-- placeholder for now -->
+                    <div class="thumbnail"></div>
+                    <p class="title">{{ film.title }}</p>
+                    <p class="description">{{ film.description }}</p>
+                </a>
+            {% empty %}
+                <p>No films</p>
+            {% endfor %}
+        </div>
+    </main>
+{% endblock %}

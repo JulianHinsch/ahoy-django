@@ -87,8 +87,6 @@ header {
       .landing .flex-container {
         margin-top: 0;
         background-color: rgba(0, 0, 0, 0.5);
-        flex-direction: row;
-        align-items: center;
         padding: 1em; } }
     .landing .flex-container > img {
       display: block;
@@ -225,56 +223,40 @@ header {
         .auth-page > .card > .auth-form > .two-column-layout > input:nth-of-type(6) {
           right: 0;
           top: 210px; } }
-.schedule-page {
-  padding: 1em;
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  background-color: #000000;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-image: url("https://i.giphy.com/media/wkKyBT94rB196/giphy.webp"); }
-  @media (min-width: 768px) {
-    .schedule-page {
-      align-items: center; } }
-.schedule {
-  border: 3px solid rgba(0, 140, 255, 0.645);
+.browse-page {
   color: #ffffff;
-  padding: 1em;
-  text-align: center;
-  background-color: rgba(0, 0, 0, 0.5); }
-  .schedule h1 {
-    text-transform: uppercase;
-    font-size: 24px;
-    font-weight: normal;
-    color: rgba(0, 140, 255, 0.645);
-    margin-top: 0;
-    padding: 0.5em;
-    letter-spacing: 14px;
-    color: #64b9ff; }
-  .schedule table {
-    width: 100%;
-    border: 1px solid #ffffff;
-    border-collapse: collapse;
-    margin-bottom: 1em; }
-    .schedule table tr {
-      border: 1px solid #ffffff; }
-    .schedule table th, .schedule table td {
-      width: 50%;
-      padding: 0.5em;
-      font-weight: normal; }
-    .schedule table th:first-child,
-    .schedule table td:first-child {
-      text-align: right; }
-    .schedule table th:last-child,
-    .schedule table td:last-child {
-      text-align: left; }
-    .schedule table td[colspan="2"] {
-      text-align: center; }
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 4em;
+  padding: 1em; }
+  .browse-page > .title {
+    display: flex;
+    padding-left: 0.5em; }
+  .browse-page > .film-list {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap; }
+    .browse-page > .film-list > .film {
+      display: flex;
+      flex-direction: column;
+      margin: 1em;
+      scale: 1;
+      transition: scale cubic-bezier(0.075, 0.82, 0.165, 1); }
+      .browse-page > .film-list > .film > .thumbnail {
+        width: 200px;
+        height: 140px;
+        background-color: #333333;
+        border-radius: 5px;
+        border: none; }
+      .browse-page > .film-list > .film > .title {
+        margin-bottom: 0.5em; }
+      .browse-page > .film-list > .film > .description {
+        margin-top: 0;
+        font-size: 12px; }
+      .browse-page > .film-list > .film:hover {
+        cursor: pointer;
+        scale: 1.05; }
 
 .watch-page {
   padding: 1em;
@@ -320,51 +302,6 @@ header {
       .watch-page footer {
         justify-content: center; }
         .watch-page footer nav {
-          display: none; } }
-.listen-page {
-  padding: 1em;
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  color: #ffffff;
-  background-color: #000000; }
-  .listen-page main {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center; }
-    .listen-page main a {
-      text-decoration: underline; }
-  .listen-page footer {
-    padding: 1em;
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    border: 1px solid #FFFFBC; }
-    .listen-page footer .logo {
-      width: 100px;
-      height: 100%; }
-    .listen-page footer nav {
-      display: flex; }
-      .listen-page footer nav a {
-        color: #ffffff;
-        display: flex;
-        align-items: center;
-        padding: 0.5em;
-        border: 2px solid transparent; }
-        .listen-page footer nav a:hover {
-          border-color: #ffffff; }
-    @media (max-width: 767px) {
-      .listen-page footer {
-        justify-content: center; }
-        .listen-page footer nav {
           display: none; } }
 
 /*# sourceMappingURL=index.css.map */
